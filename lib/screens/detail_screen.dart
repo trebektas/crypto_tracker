@@ -21,6 +21,7 @@ class _DetailScreenState extends State<DetailScreen> {
 
   @override
   void initState() {
+    //get coin data by coinId
     getCoinDetails();
     super.initState();
   }
@@ -79,7 +80,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     const SizedBox(height: 20),
 
                     const Divider(thickness: 1),
-
+                    //Custom widgets for the details of the coin
                     StyledDetailRow(
                       "Price:",
                       "€${coinData!.currentPrice.toStringAsFixed(2)}",

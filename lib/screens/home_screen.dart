@@ -3,7 +3,10 @@ import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'package:crypto_tracker/env.dart';
 
+//Models
 import 'package:crypto_tracker/models/coins.dart';
+
+//Screens
 import 'package:crypto_tracker/screens/detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
+    //get markets data from CoinGecko API
     getData();
     super.initState();
   }
@@ -93,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           },
                         ),
                       );
-
+                      //get last markets data when the user navigate back to home screen
                       getData();
                     },
                   );
